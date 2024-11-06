@@ -1,7 +1,6 @@
 import 'dotenv/config'
 const app = express()
-const DBURI = process.env.MONGODB_URI
-const PORT = process.env.PORT
+
 import express from "express"; 
 import mongoose from "mongoose"; 
 import bcrypt from "bcrypt";
@@ -14,6 +13,7 @@ import userVerifyMiddle from './middleware/userVerify.js';
 // Middleware
 
 const port = process.env.PORT || 3050;
+const DBURI = process.env.MONGODB_URI
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
